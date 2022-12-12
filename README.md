@@ -1,1 +1,1 @@
-Simple React.js + Webpack 5 boilerplate app.
+Simple React.js + Typescript + Webpack 5 boilerplate app.
