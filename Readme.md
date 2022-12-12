@@ -91,7 +91,7 @@ export const validateSeedPhrase = (seedPhrase: string) => {
 }
 ```
 
-8. Add the following code to your App.tsx file, just before the 'return':
+8. Add the following code to your App.tsx file, just before the `return`:
 
 ```
 EmurgoModule.CardanoWasm().then((cardano) => {
