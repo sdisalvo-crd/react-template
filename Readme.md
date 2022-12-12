@@ -58,3 +58,11 @@ export const EmurgoModule: Module = new Module();
 ```
 
 7. Run 'npm start' and check if a new instance of the loader is visible in the console.
+
+8. Add the following dependency and run 'npm install':
+
+```
+"bip39": "^3.0.4"
+```
+
+This is the Bitcoin Improvement Proposal (in this case it's number 39) which handles the seedphrase.
