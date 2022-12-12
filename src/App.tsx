@@ -1,5 +1,5 @@
 import './styles.css';
-import { EmurgoModule } from './emurgo';
+import { EmurgoModule } from './lib/emurgo';
 export const App = () => {
   EmurgoModule.CardanoWasm().then((cardano) => {
     console.log(cardano);
