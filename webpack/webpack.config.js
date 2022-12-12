@@ -6,6 +6,10 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
+  experiments: {
+    asyncWebAssembly: true,
+    syncWebAssembly: true,
+  },
   module: {
     rules: [
       {
