@@ -40,6 +40,12 @@ module.exports = {
     filename: 'bundle.js',
   },
   mode: 'development',
+  devServer: {
+    historyApiFallback: true,
+    client: {
+      overlay: false,
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', './src/index.html'),
