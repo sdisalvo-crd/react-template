@@ -66,3 +66,34 @@ export const EmurgoModule: Module = new Module();
 ```
 
 This is the Bitcoin Improvement Proposal (in this case it's number 39) which handles the seedphrase.
+
+9. Add the following the following Webpack property to the "resolve":
+
+```
+resolve: {
+    ...
+    fallback: {
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('stream-browserify'),
+      buffer: require.resolve('buffer/'),
+    },
+  },
+```
+
+10. Add the following dependencies and run 'npm install':
+
+```
+"crypto-browserify": "^3.12.0",
+"stream-browserify": "^3.0.0",
+"buffer": "^6.0.3",
+```
+
+11. Add the following plugin to webpack:
+
+```
+new webpack.ProvidePlugin({
+    Buffer: ['buffer', 'Buffer'],
+}),
+```
+
+If you console.log with a valid number (eg. 'generateMnemonicSeed(160)') you should see a seedphrase being generated in the console.
